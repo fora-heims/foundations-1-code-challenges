@@ -19,7 +19,11 @@ Output:
 */
 
 export function makeArrayOfNamesWithMap(arr) {
-    return [];
+    let newArray = [];
+    arr.map(a => {
+        newArray.push(a.name);
+    });
+    return newArray;
 }
 
 /*
