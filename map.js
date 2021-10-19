@@ -19,11 +19,9 @@ Output:
 */
 
 export function makeArrayOfNamesWithMap(arr) {
-    let newArray = [];
-    arr.map(a => {
-        newArray.push(a.name);
-    });
-    return newArray;
+
+    return arr.map(object => object.name);
+
 }
 
 /*
@@ -37,16 +35,7 @@ Output:
 ]*/
 
 export function makeArrayWithIsHungry(arr) {
-    let newArray = [];
-    arr.map(a => {
-        let updatedObject = {
-            name: `${a.name}`,
-            isHungry: true,
-            type: `${a.type}`
-        };
-        newArray.push(updatedObject);
-    });
-    return newArray;
+    return arr.map(object => ({ ...object, isHungry: true }));
 }
 
 /*
@@ -60,16 +49,16 @@ Output:
 ]*/
 
 export function makeShoutingArray(arr) {
-    let newArray = [];
-    arr.map(a => {
-        let updatedObject = {
-            name: `${a.name.toUpperCase()}`,
-            type: `${a.type}`
-        };
-        newArray.push(updatedObject);
+    return arr.map(obj => {
+        let rObj = {};
+        rObj['name'] = obj.name.toUpperCase();
+        rObj['type'] = obj.type;
+        return rObj;
     });
-    return newArray;
+
 }
+    
+
 
 
 /*
@@ -79,7 +68,12 @@ Output:
 */
 
 export function makeStringArray(arr) {
-    return [];
+    let newArray = [];
+    arr.map(a => {
+        let joinedObjectString = `${a.name + a.type}`;
+        newArray.push(joinedObjectString);
+    });
+    return newArray;
 }
 
 /*
