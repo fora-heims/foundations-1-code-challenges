@@ -31,7 +31,11 @@ Output:
 */
 
 export function makeReversedArrayOfTypes(arr) {
-    return [];
+    let reverseArray = [];
+    arr.forEach(a => {
+        reverseArray.push(a.type);
+    });
+    return reverseArray.reverse();
 }
 
 /*
