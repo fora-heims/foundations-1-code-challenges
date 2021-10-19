@@ -19,9 +19,7 @@ Output:
 */
 
 export function makeArrayOfNamesWithMap(arr) {
-
     return arr.map(object => object.name);
-
 }
 
 /*
@@ -55,7 +53,6 @@ export function makeShoutingArray(arr) {
         rObj['type'] = obj.type;
         return rObj;
     });
-
 }
     
 
@@ -68,12 +65,7 @@ Output:
 */
 
 export function makeStringArray(arr) {
-    let newArray = [];
-    arr.map(a => {
-        let joinedObjectString = `${a.name + a.type}`;
-        newArray.push(joinedObjectString);
-    });
-    return newArray;
+    return arr.map(obj => `${obj.name + obj.type}`);
 }
 
 /*
