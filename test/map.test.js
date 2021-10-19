@@ -31,7 +31,7 @@ test('should return all names', (expect) => {
     expect.deepEqual(actual, expected);
 });
 
-skip('should return all objects with an added isHungry property equal to true', (expect) => {
+test('should return all objects with an added isHungry property equal to true', (expect) => {
     //Arrange
     // Set up your arguments and expectations
     const expected = [

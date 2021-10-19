@@ -37,7 +37,16 @@ Output:
 ]*/
 
 export function makeArrayWithIsHungry(arr) {
-    return [];
+    let newArray = [];
+    arr.map(a => {
+        let updatedObject = {
+            name: `${a.name}`,
+            isHungry: true,
+            type: `${a.type}`
+        };
+        newArray.push(updatedObject);
+    });
+    return newArray;
 }
 
 /*
