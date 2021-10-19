@@ -60,7 +60,15 @@ Output:
 ]*/
 
 export function makeShoutingArray(arr) {
-    return [];
+    let newArray = [];
+    arr.map(a => {
+        let updatedObject = {
+            name: `${a.name.toUpperCase()}`,
+            type: `${a.type}`
+        };
+        newArray.push(updatedObject);
+    });
+    return newArray;
 }
 
 
