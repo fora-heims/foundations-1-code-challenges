@@ -92,7 +92,9 @@ export function findTheCheese(arr) {
 Output: 
 ['apple', 'banana']
 */
-
 export function listNamesOfAllFruits(arr) {
-    return [];
+    let x = [];
+    x = arr.filter(obj => obj.category === 'fruit');
+    x = x.map(object => object.id);
+    return x;
 }
