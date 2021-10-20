@@ -24,7 +24,7 @@ etc
 */
 
 export function makeWeirdStringFromKeys(someObject) {
-    return '';
+    return Object.keys(someObject).join();
 }
 
 
@@ -51,5 +51,11 @@ Output:
 */
 
 export function makeTuples(someObject) {
-    return [];
+    let finalArray = [];
+    // let x = [Object.keys(someObject)[0], Object.values(someObject)[0]];
+    // let y = [Object.keys(someObject)[1], Object.values(someObject)[1]];
+    // let z = [Object.keys(someObject)[2], Object.values(someObject)[2]];
+    // finalArray = [x, y, z];
+    finalArray = Object.entries(someObject);
+    return finalArray;
 }
