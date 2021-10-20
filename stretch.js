@@ -112,5 +112,21 @@ Output:
 */
 
 export function countByCategory(arr) {
-    return {};
+    let rObj = {};
+    let dairy = 0;
+    let fruit = 0;
+    let other = 0;
+    arr.forEach(obj => {
+        if(obj.category === 'dairy') {
+            dairy++;
+        } else if(obj.category === 'fruit') {
+            fruit++;
+        } else {
+            other++;
+        }
+    });
+    rObj['dairy'] = dairy;
+    rObj['fruit'] = fruit;
+    rObj['other'] = other;
+    return rObj;
 }
