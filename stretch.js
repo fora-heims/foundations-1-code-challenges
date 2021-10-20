@@ -94,7 +94,11 @@ Output:
 */
 
 export function makeAHashMap(arr) {
-    return {};
+    let rObj = {};
+    arr.forEach(obj => {
+        rObj[obj.id] = obj;
+    });
+    return rObj;
 }
 
 
