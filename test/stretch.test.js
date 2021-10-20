@@ -40,7 +40,7 @@ const groceries = [
     },
 ];
 
-skip('should organize prices by key', (expect) => {
+test('should organize prices by key', (expect) => {
     //Arrange
     // Set up your arguments and expectations
     const expected = {
